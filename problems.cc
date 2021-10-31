@@ -12,6 +12,30 @@ std::string base13(int dec) {
   return digits;
 }
 
+int arrayPlusArray(std::vector<int> a, std::vector<int> b)
+{
+  int sum=0;
+  if (a.size() == b.size()) {
+      for (size_t i = 0; i != a.size(); ++i) {
+          sum += a[i] + b[i];
+
+      }
+      return sum;
+  }
+  else {
+      for (size_t i = 0; i != a.size(); ++i) {
+          sum += a[i];
+
+      }
+      for (size_t i = 0; i != b.size(); ++i) {
+          sum += b[i];
+
+      }
+      return sum;
+  }
+    return 0;
+}
+
 std::string reverse(std::string str) {
 
   std::string reverse;
