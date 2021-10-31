@@ -30,3 +30,10 @@ TEST_CASE("ARRAY PLUS ARRAY", "[arrayPlusarray]") {
 
     }
 }
+// Returing Strings Problem
+TEST_CASE("Returning string") {
+        std::string first = "Hello, ";
+        std::string third = " how are you doing today?";
+        auto str = GENERATE(as < std::string>{}, "a", "bb", "ccc");
+        REQUIRE(first + str + third == greet(str));
+}
